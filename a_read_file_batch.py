@@ -24,15 +24,6 @@ def read_figure(folder_path,frame_number):
 
 
 
-if __name__ == '__main__':
-    folder_path='C:\\Users\\kzhang9\\Desktop\\images_18_05_2022'
-    file_date = '18_05_2022'
-    #folder_path='O:\\imgae_ER_env_data_raw\\'+file_date+'\\images_'+ file_date+'(3)'
-    file=read_ID(file_date)
-    for i in file['Frame ID']:
-        print(read_figure(folder_path,i))
-
-
 
 
 
