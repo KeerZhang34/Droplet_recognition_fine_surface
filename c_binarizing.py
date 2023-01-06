@@ -4,10 +4,6 @@ from image_processing_in_batch.separated_processing.b_pre_processing import prep
 from image_processing_in_batch.separated_processing.a_read_single_file import read_single_file
 
 
-
-#sharpened=preprocessing(10,12)
-#file_name=read_single_file(0)[-1]
-
 def binarizing_adaptive(n,frame_ID,file_handler,extracted_threshold_value,write=True, folder_path='', addition=''):
 
     blur = cv2.GaussianBlur(file_handler, (5, 5), 0)
@@ -40,12 +36,3 @@ def binarizing_mono(frame_ID,file_handler,threshold_method=cv2.THRESH_BINARY + c
         cv2.imwrite('{}_binarized_mono.bmp'.format(frame_ID), binarized)
 
     return thresh, binarized
-
-
-
-
-
-#if __name__ == '__main__':
-    #binarized=binarizing_adaptive(6)
-    #cv2.imshow('',binarized)
-    #cv2.waitKey(0)
