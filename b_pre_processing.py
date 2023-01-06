@@ -5,10 +5,6 @@ import numpy as np
 from image_processing_in_batch.separated_processing.a_read_single_file import read_single_file
 import image_processing_in_batch.separated_processing.a_read_file_batch as a_read_file_batch
 
-#ori_file=read_single_file(0)[0]
-#background_image=cv2.imread('C:\\Users\\kzhang9\\Desktop\\15_02_2022_3\\44000+93441.81.bmp')
-
-
 # enhancing contrast
 def enhancing_contrats(file, cliplimit=3.0, tileGridSize=(0,0)):
     lab = cv2.cvtColor(file, cv2.COLOR_BGR2LAB)
@@ -18,19 +14,6 @@ def enhancing_contrats(file, cliplimit=3.0, tileGridSize=(0,0)):
     lab_enhanced = cv2.merge((enhanced_l, a, b))
     rgb_enhanced = cv2.cvtColor(lab_enhanced, cv2.COLOR_LAB2RGB)
     return rgb_enhanced
-
-
-#ori_contrast=enhancing_contrats(ori_file)
-#gray_scale_ori = cv2.cvtColor(ori_contrast, cv2.COLOR_BGR2GRAY)
-
-#background_contrast=enhancing_contrats(background_image)
-#gray_scale_background_image=cv2.cvtColor(background_contrast,cv2.COLOR_BGR2GRAY)
-
-
-
-
-
-
 
 
 def background_removal(gray_scale_ori,gray_scale_background_image,frame_ID, write, folder_path):
