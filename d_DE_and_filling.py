@@ -4,11 +4,6 @@ import cv2
 from image_processing_in_batch.separated_processing.c_binarizing import binarizing_adaptive, binarizing_mono
 from image_processing_in_batch.separated_processing.a_read_single_file import read_single_file
 
-#binarized=binarizing_adaptive(12)
-#binarized=binarizing_mono(0)
-#file_name=read_single_file(0)[-1]
-
-
 
 def draw_rectangle_and_corner(input_file,line_thickness,corner_pixel_removed):
 
@@ -142,12 +137,4 @@ def draw_rectangle_corner_inverse(file_handler,line_thickness):
 
     return file_handler_rect
 
-
-
-
-
-if __name__ == '__main__':
-    filling(0)
-    #cv2.imshow('',filling(0))
-    #cv2.waitKey(0)
 
